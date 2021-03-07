@@ -9,6 +9,7 @@ High level descriptions of the most important changes between major Pylint versi
 .. toctree::
    :maxdepth: 1
 
+   3.0.rst
    2.13.rst
    2.12.rst
    2.11.rst

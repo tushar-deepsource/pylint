@@ -1266,13 +1266,9 @@ class PyLinter(
         self._ignore_paths = get_global_option(self, "ignore-paths")
 
     def generate_reports(self):
-        """close the whole package /module, it's time to make reports !
+        """Close the whole package /module, it's time to make reports !
 
-        if persistent run, pickle results for later comparison
-        """
-        # Display whatever messages are left on the reporter.
-        self.reporter.display_messages(report_nodes.Section())
-
+        if persistent run, pickle results for later comparison."""
         if self.file_state.base_name is not None:
             # load previous results if any
             previous_stats = config.load_results(self.file_state.base_name)
@@ -1291,6 +1287,8 @@ class PyLinter(
         else:
             self.reporter.on_close(self.stats, LinterStats())
             score_value = None
+        # Display whatever messages are left on the reporter.
+        self.reporter.display_messages(report_nodes.Section())
         return score_value
 
     def _report_evaluation(self):
