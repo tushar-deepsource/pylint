@@ -32,6 +32,15 @@ Extensions
 Other Changes
 =============
 
+* An astroid issue where symlinks were not being taken into account
+  was fixed
+
+  Closes #1470
+  Closes #3499
+  Closes #4302
+  Closes #4798
+  Closes #5081
+
 * Fixed extremely long processing of long lines with comma's.
 
   Closes #5483
